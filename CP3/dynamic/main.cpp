@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    if (queen1.isUnderThreat(queen2) && queen1.isUnderThreat(queen3) && queen2.isUnderThreat(queen3)) {
+    if (queen1.isUnderThreat(queen2) && queen1.isUnderThreat(queen3) && queen3.isUnderThreat(queen3)) {
         std::cout << "All 3 queens are under threat";
     } else if (queen1.isUnderThreat(queen2)) {
         std::cout << "Queens 1 and 2 are under threat";

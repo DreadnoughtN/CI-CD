@@ -1,0 +1,4 @@
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/daniil/CI-CD/CP3/dynamic
+g++ -L. -shared -o libqueen.so queen.cpp -fPIC
+g++ -L. -Wall -o chess.out main.cpp -lqueen
+
