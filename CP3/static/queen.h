@@ -1,16 +1,17 @@
-#include "queen.h"
-#include <cmath>
+#ifndef QUEEN_H
+#define QUEEN_H
 
-Queen::Queen(int x_pos, int y_pos) : x(x_pos), y(y_pos) {}
+class Queen {
+private:
+    int x;
+    int y;
 
-bool Queen::isUnderThreat(const Queen& other) const {
-    return (x == other.x || y == other.y || std::abs(x - other.x) == std::abs(y - other.y));
-}
+public:
+    Queen(int x_pos = 0, int y_pos = 0);
+    bool isUnderThreat(const Queen& other) const;
+    bool isValidPosition() const;
+    int getX() const;
+    int getY() const;
+};
 
-bool Queen::isValidPosition() const {
-    return (x >= 1 && x <= 8 && y >= 1 && y <= 8);
-}
-
-int Queen::getX() const { return x; }
-
-int Queen::getY() const { return y; }
+#endif // QUEEN_H

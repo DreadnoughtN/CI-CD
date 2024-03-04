@@ -8,23 +8,25 @@ int main() {
     std::cin >> x1 >> y1;
     Queen queen1(x1, y1);
     if (!queen1.isValidPosition()) {
-        std::cout << "Incorrect input";
+        std::cout << "Invalid input for Queen 1";
         return 0;
     }
 
     std::cout << "Enter coordinates for Queen 2 (1 <= x,y <= 8): ";
     std::cin >> x2 >> y2;
     Queen queen2(x2, y2);
-    if (!queen2.isValidPosition() || !queen1.isUnderThreat(queen2)) {
-        std::cout << "Incorrect input";
+    if (!queen2.isValidPosition()) {
+        std::cout << "Invalid input for Queen 2";
         return 0;
     }
 
-    std::cout << "Enter coordinates for Queen 3 (1 <= x,y <= 8): ";
+
+
+std::cout << "Enter coordinates for Queen 3 (1 <= x,y <= 8): ";
     std::cin >> x3 >> y3;
     Queen queen3(x3, y3);
-    if (!queen3.isValidPosition() || !queen1.isUnderThreat(queen3) || !queen2.isUnderThreat(queen3)) {
-        std::cout << "Incorrect input";
+    if (!queen3.isValidPosition()) {
+        std::cout << "Invalid input for Queen 3";
         return 0;
     }
 

@@ -14,3 +14,4 @@ bool Queen::isValidPosition() const {
 int Queen::getX() const { return x; }
 
 int Queen::getY() const { return y; }
+
